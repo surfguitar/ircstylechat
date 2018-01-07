@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{27A8E5C0-8931-41DB-BA6E-D4BF9590B25A}</ProjectGuid>
+    <ProjectGuid>{81348761-9CEE-4959-921F-92A3DC99F42E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UseCases</RootNamespace>
@@ -40,17 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserCases.cs" />
+    <Compile Include="UserScenarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\03 - DataSideAdapter\MsSqlStorage\MsSqlStorage.csproj">
+    <ProjectReference Include="..\02 - Application\Domain\Domain.csproj">
+      <Project>{4ca3ad20-b1a4-4b9a-a53d-6b32debc6312}</Project>
+      <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\03 - DataSideAdapter\MsSqlStorage\MsSqlStorage.csproj">
       <Project>{86088635-c1fd-4b1e-af85-1314a4a88820}</Project>
       <Name>MsSqlStorage</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Domain\Domain.csproj">
-      <Project>{4CA3AD20-B1A4-4B9A-A53D-6B32DEBC6312}</Project>
-      <Name>Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
